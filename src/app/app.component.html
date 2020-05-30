@@ -1,3 +1,31 @@
 <h1>Password Generator</h1>
-<label>Length</label>
-<input />
+<div>
+  <label>Length</label>
+  <input />
+</div>
+
+<div>
+  <input type="checkbox" />
+  <label>Use Letters</label>
+</div>
+<div>
+  <input type="checkbox" />
+  <label>Use Numbers</label>
+</div>
+<div>
+  <input
+    type="checkbox"
+    name="useSymbols"
+    [value]="useSymbols"
+    (change)="toggleCheckBox('useSymbols')"
+  />
+  <label>Use Symbols</label>
+</div>
+<div>
+  <button (click)="onButtonClick()">Generate</button>
+</div>
+<div>
+  <label>Your Password</label>
+  <!-- <input value="{{ password }}" /> -->
+  <input [value]="password" />
+</div>
